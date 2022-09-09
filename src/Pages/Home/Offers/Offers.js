@@ -20,45 +20,37 @@ const Offers = () => {
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Shoes!</h2>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div class="card-actions">
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="card shadow">
                         <figure class="px-10 pt-10">
-                            <img src={relationship} alt="Shoes" class="rounded-xl w-16" />
+                            <img src={mentalhealth} alt="Shoes" class="rounded-xl w-16" />
                         </figure>
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Shoes!</h2>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div class="card-actions">
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="card shadow">
                         <figure class="px-10 pt-10">
-                            <img src={relationship} alt="Shoes" class="rounded-xl w-16" />
+                            <img src={conflicting} alt="Shoes" class="rounded-xl w-16" />
                         </figure>
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Shoes!</h2>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div class="card-actions">
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="card shadow">
                         <figure class="px-10 pt-10">
-                            <img src={relationship} alt="Shoes" class="rounded-xl w-16" />
+                            <img src={feelings} alt="Shoes" class="rounded-xl w-16" />
                         </figure>
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">Shoes!</h2>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div class="card-actions">
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
