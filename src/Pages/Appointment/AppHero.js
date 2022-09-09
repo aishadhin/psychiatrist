@@ -3,10 +3,7 @@ import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 
-const AppHero = () => {
-
-    const [date, setDate] = useState(new Date())
-
+const AppHero = ({date , setDate}) => {
 
     return (
         <div className='bg-white pt-[120px] pb-[65px]'>
