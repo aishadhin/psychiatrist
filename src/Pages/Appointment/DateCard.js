@@ -1,8 +1,7 @@
 import React from 'react';
 
-const DateCard = ({ service }) => {
+const DateCard = ({ service , setTreatment }) => {
 
-    console.log(service)
     return (
         <div>
             <div class="card w-96 bg-base-100 shadow-xl">
@@ -17,11 +16,14 @@ const DateCard = ({ service }) => {
                     </p>
                     <p>{service?.slots.length} {service?.slots.length > 1 ? "spaces" : "space"} available</p>
                     <div class="card-actions justify-end">
-                        <button disabled={service?.slots.length === 0} class="btn btn-primary">Book Appointment</button>
+                        <label onClick={() => setTreatment(service)} htmlFor="my-modal-6" disabled={service?.slots.length === 0} class="btn btn-primary">Book Appointment</label>
                     </div>
+                    
+                        
+                    
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
