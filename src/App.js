@@ -4,8 +4,10 @@ import About from "./Pages/About/About";
 import Appointment from "./Pages/Appointment/Appointment";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import RequireAuth from "./Pages/Login/RequireAuth";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navbar from './Pages/Shared/Navbar/Navbar';
+import Signup from "./Pages/Signup/Signup";
 
 function App() {
   return (
@@ -13,9 +15,14 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/appointment" element={
+          <RequireAuth>
+            <Appointment />
+          </RequireAuth>
+        } />
         <Route path="aboutus" element={<About />} />
         <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Signup />} />
       </Routes>
       <Footer></Footer>
     </div>

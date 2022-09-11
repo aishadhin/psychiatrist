@@ -1,15 +1,18 @@
 import React from 'react';
 import { format } from 'date-fns';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
-const AppointmentModal = ({setTreatment, treatment, date}) => {
+const AppointmentModal = ({ setTreatment, treatment, date }) => {
+    const [user, loading, error] = useAuthState(auth);
 
 
-    const handleSubmit = e =>{
+    const handleSubmit = e => {
         e.preventDefault();
         const time = e.target.time.value;
         const slot = e.target.slot.value;
         const name = e.target.name.value;
-        const data = {time , slot, name}
+        const data = { time, slot, name }
         console.log(data)
         setTreatment(null)
     }
@@ -29,8 +32,8 @@ const AppointmentModal = ({setTreatment, treatment, date}) => {
                                 treatment?.slots.map(slot => <option value={slot}>{slot}</option>)
                             }
                         </select>
-                        <input type="text" placeholder="Your Name" name='name' className="input input-bordered w-full max-w-xs my-2 " />
-                        <input type="email" placeholder="Your Email" name='email' className="input input-bordered w-full max-w-xs my-2 " />
+                        <input type="text" value={user?.displayName} disabled name='name' className="input input-bordered w-full max-w-xs my-2 " />
+                        <input type="email" value={user?.email} disabled name='email' className="input input-bordered w-full max-w-xs my-2 " />
                         <input type="text" placeholder="Your Phone Number" name='phone' className="input input-bordered w-full max-w-xs my-2 " />
                         <input type="submit" value="Submit" className="btn btn-primary w-full max-w-xs my-2 " />
                     </form>
