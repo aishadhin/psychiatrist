@@ -13,10 +13,10 @@ const AvailableAppointment = ({ date }) => {
             .then(data => setServices(data))
     }, [])
     return (
-        <div>
+        <div className='container mx-auto'>
             <div>
                 <h2 className='text-center'>Available Appointments on {format(date, 'PP')}</h2>
-                <div>
+                <div className='lg:grid mx-auto lg:grid-cols-3'>
                     {
                         services.map(service => <DateCard setTreatment={setTreatment} service={service} key={service._id}></DateCard>)
                     }
