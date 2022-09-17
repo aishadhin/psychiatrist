@@ -6,9 +6,12 @@ import About from "./Pages/About/About";
 import Appointment from "./Pages/Appointment/Appointment";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyAppointments from "./Pages/Dashboard/MyAppointments";
+import MyHistory from "./Pages/Dashboard/MyHistory";
 import MyReview from "./Pages/Dashboard/MyReview";
+import Users from "./Pages/Dashboard/Users";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import RequireAdmin from "./Pages/Login/RequireAdmin";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navbar from './Pages/Shared/Navbar/Navbar';
@@ -30,7 +33,10 @@ function App() {
             <Dashboard />
           </RequireAuth>}>
           <Route index element={<MyAppointments></MyAppointments>} />
-          <Route path="myreview" element={<MyReview />} />
+          <Route path="review" element={<MyReview />} />
+          <Route path="history" element={<MyHistory />} />
+          <Route path="users" element={
+            <Users />} />
         </Route>
         <Route path="aboutus" element={<About />} />
         <Route path="login" element={<Login />} />
