@@ -1,9 +1,7 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react"
 
-const useToken = (user) => {
+const useToken = user =>{
     const [token, setToken] = useState('');
-
     useEffect( () =>{
         const email = user?.user?.email;
         const currentUser = {email: email};
@@ -25,7 +23,7 @@ const useToken = (user) => {
         }
 
     }, [user]);
-    return [token]
-};
+    return [token];
+}
 
 export default useToken;

@@ -35,8 +35,7 @@ function App() {
           <Route index element={<MyAppointments></MyAppointments>} />
           <Route path="review" element={<MyReview />} />
           <Route path="history" element={<MyHistory />} />
-          <Route path="users" element={
-            <Users />} />
+          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
         <Route path="aboutus" element={<About />} />
         <Route path="login" element={<Login />} />

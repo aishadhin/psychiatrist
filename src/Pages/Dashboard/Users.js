@@ -3,41 +3,36 @@ import { useQuery } from 'react-query';
 import UserRow from './UserRow';
 
 const Users = () => {
-
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
         method: 'GET',
-        headers: {
+        headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()));
-
     if (isLoading) {
         return <button className="btn absolute top-[50%] left-[50%] btn-square loading"></button>
     }
-
-
-
     return (
         <div>
-            <h2 className='text-2xl'>All Users</h2>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
+            <h2 className="text-2xl">All Users: {users.length}</h2>
+            <div class="overflow-x-auto">
+                <table class="table w-full">
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Email</th>
-                            <th></th>
-                            <th></th>
+                            <th>Name</th>
+                            <th>Job</th>
+                            <th>Favorite Color</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            users?.map(user => <UserRow
-                                key={user._id}
-                                user={user}
-                                refetch={refetch}
-                            ></UserRow>)
-                        }
+                       {
+                           users.map(user=><UserRow
+                           key={user._id}
+                           user={user}
+                           refetch={refetch}
+                           ></UserRow>)
+                       }
                     </tbody>
                 </table>
             </div>
