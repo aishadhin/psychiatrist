@@ -5,7 +5,6 @@ import AppointmentModal from './AppointmentModal';
 import DateCard from './DateCard';
 
 const AvailableAppointment = ({ date }) => {
-    // const [services, setServices] = useState([]);
     const [treatment, setTreatment] = useState(null);
 
     const formattedDate = format(date, 'PP')
@@ -16,15 +15,6 @@ const AvailableAppointment = ({ date }) => {
      )
    )
 
-
-
-
-
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/available?date=${formattedDate}`)
-    //         .then(res => res.json())
-    //         .then(data => setServices(data))
-    // }, [formattedDate])
     return (
         <div className='container mx-auto'>
             <div>

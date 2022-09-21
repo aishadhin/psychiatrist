@@ -15,6 +15,7 @@ const DateCard = ({ service , setTreatment }) => {
                         }
                     </p>
                     <p>{service?.slots.length} {service?.slots.length > 1 ? "spaces" : "space"} available</p>
+                    <p>fee: ${service?.price}</p>
                     <div class="card-actions justify-end">
                         <label onClick={() => setTreatment(service)} htmlFor="my-modal-6" disabled={service?.slots.length === 0} class="btn btn-primary">Book Appointment</label>
                     </div>
