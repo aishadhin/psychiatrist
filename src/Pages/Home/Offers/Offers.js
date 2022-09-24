@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Offers = () => {
     return (
-        <div className='bg-white py-[65px]'>
+        <div className='bg-[#F4FCFA] py-[65px]'>
             <div className='w-[88%] mx-auto'>
                 <div className='text-center lg:w-1/2 mx-auto'>
                     <h2 className='capitalize text-3xl font-bold'>What we are offer</h2>
