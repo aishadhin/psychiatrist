@@ -21,7 +21,7 @@ const Reviews = () => {
                     <p className='mt-3 lg:w-4/6 mx-auto'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div className='my-10'>
-                    <Slider {...settings}>
+                    <Slider {...settings} className=''>
                         <div>
                             <div className='lg:w-2/5 mx-auto'>
 

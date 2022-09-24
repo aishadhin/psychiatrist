@@ -22,3 +22,15 @@ code {
 button.rdp-button_reset.rdp-button.rdp-day.rdp-day_selected {
   background: rgb(144, 75, 255);
 }
+
+.slick-dots li button:before {
+  color: #F7AD18;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #F7AD18;
+}
+
+.slick-dots {
+  bottom: 30px;
+}

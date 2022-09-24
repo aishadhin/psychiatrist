@@ -27,7 +27,7 @@ const Navbar = () => {
         <li>{user ? <button onClick={logout} to="/Login">Sign Out</button> : <Link to="/Login">Login</Link>}</li>
     </>
     return (
-        <div className='bg-white fixed w-full shadow top-0'>
+        <div className='bg-white fixed w-full z-10 shadow top-0'>
             <div class="navbar justify-between container mx-auto">
                 <div class="navbar-start">
                     <div class="dropdown">
