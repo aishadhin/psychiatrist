@@ -14,19 +14,19 @@ const SmallAbout = () => {
 
                         <div className='mt-10 grid justify-between grid-cols-2 lg:gap-x-10 gap-y-2'>
                             <p className='flex items-center gap-2'>
-                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[18px] capitalize'>personal consultation</span>
+                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[16px] capitalize'>personal consultation</span>
                             </p>
                             <p className='flex items-center gap-2'>
-                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[18px] capitalize'>Unique Technique</span>
+                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[16px] capitalize'>Unique Technique</span>
                             </p>
                             <p className='flex items-center gap-2'>
-                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[18px] capitalize'>Group Therapy</span>
+                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[16px] capitalize'>Group Therapy</span>
                             </p>
                             <p className='flex items-center gap-2'>
-                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[18px] capitalize'>Couple Problem</span>
+                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[16px] capitalize'>Couple Problem</span>
                             </p>
                             <p className='flex items-center gap-2'>
-                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[18px] capitalize'>Online Therapy</span>
+                                <BsCheckCircle className='text-secondary' /><span className='font-medium text-[16px] capitalize'>Online Therapy</span>
                             </p>
                         </div>
                         <button class="bg-primary mt-10 py-2 px-6 hover:bg-white hover:text-primary border hover:border-primary rounded-full text-white font-medium">Learn More</button>
