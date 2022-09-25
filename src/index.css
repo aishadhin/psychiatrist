@@ -19,9 +19,9 @@ code {
     monospace;
 }
 
-button.rdp-button_reset.rdp-button.rdp-day.rdp-day_selected {
-  background: rgb(144, 75, 255);
-}
+/* button.rdp-button_reset.rdp-button.rdp-day.rdp-day_selected {
+  background: #26ABA3;
+} */
 
 .slick-dots li button:before {
   color: #F7AD18;
@@ -33,4 +33,23 @@ button.rdp-button_reset.rdp-button.rdp-day.rdp-day_selected {
 
 .slick-dots {
   bottom: 0px;
+}
+
+.collapse-title.text-primary-content.peer-checked\:bg-secondary.peer-checked\:text-secondary-content {
+  padding-left: 0;
+}
+
+
+
+
+
+.rdp {
+  --rdp-cell-size: 40px !important;
+  --rdp-accent-color: #26ABA3 !important;
+  --rdp-background-color: #e7edff !important;
+  --rdp-accent-color-dark: #26ABA3;
+  --rdp-background-color-dark: #26ABA3 !important;
+  --rdp-outline: 2px solid var(--rdp-accent-color) !important;
+  --rdp-outline-selected: 3px solid var(--rdp-accent-color) !important;
+  margin: 1em;
 }

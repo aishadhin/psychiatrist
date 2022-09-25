@@ -2,7 +2,7 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/Logo.png'
+import logo from '../../../assets/newLogo.png'
 import auth from '../../../firebase.init';
 
 const Navbar = () => {
@@ -16,15 +16,15 @@ const Navbar = () => {
 
 
     const menuItems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/Appointment">Appointment</Link></li>
-        <li><Link to="/Reviews">Reviews</Link></li>
-        <li><Link to="/AboutUs">About Us</Link></li>
-        <li><Link to="/ContactUs">Contact Us</Link></li>
+        <li><Link className='font-medium' to="/">Home</Link></li>
+        <li><Link className='font-medium' to="/Appointment">Appointment</Link></li>
+        <li><Link className='font-medium' to="/Reviews">Reviews</Link></li>
+        <li><Link className='font-medium' to="/AboutUs">About</Link></li>
+        <li><Link className='font-medium' to="/ContactUs">Contact</Link></li>
         {
-            user && <li><Link to="/dashboard">Dashboard</Link></li>
+            user && <li><Link className='font-medium' to="/dashboard">Dashboard</Link></li>
         }
-        <li>{user ? <button onClick={logout} to="/Login">Sign Out</button> : <Link to="/Login">Login</Link>}</li>
+        <li>{user ? <button className='font-medium' onClick={logout} to="/Login">Sign Out</button> : <Link className='font-medium' to="/Login">Login</Link>}</li>
     </>
     return (
         <div className='bg-white fixed w-full z-10 shadow top-0'>

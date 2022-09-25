@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { format } from 'date-fns';
+import React from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+import appointment from '../../assets/appointment_banner.jpg'
 
-const AppHero = ({date , setDate}) => {
+const AppHero = ({ date, setDate }) => {
 
     return (
         <div className='bg-white pt-[120px] pb-[65px]'>
-            <div class="container mx-auto">
-                <div class="hero-content justify-between flex-col lg:flex-row-reverse">
-                    <img src="https://placeimg.com/260/400/arch" class="rounded-lg shadow" alt='' />
-                    <div className=''>
+            <div class="lg:w-[68%] w-[88%] mx-auto">
+                <div class="flex justify-center flex-col lg:flex-row-reverse">
+                    <img src={appointment} class="lg:w-1/2" alt='' />
+                    <div className='lg:w-1/2'>
                         <DayPicker
+                            className='flex justify-center lg:justify-start'
                             mode="single"
                             selected={date}
                             onSelect={setDate}
                         />
-                        <p>You picked {format(date, 'PP')}.</p>
                     </div>
                 </div>
             </div>

@@ -40,7 +40,7 @@ const Reviews = () => {
           ]
     };
     return (
-        <div className='bg-white py-[65px]'>
+        <div className='bg-white lg:py-[65px]'>
             <div className='w-[88%] mx-auto'>
                 <div className='text-center lg:w-1/2 mx-auto'>
                     <h2 className='capitalize text-3xl font-bold'>What Patients Says</h2>

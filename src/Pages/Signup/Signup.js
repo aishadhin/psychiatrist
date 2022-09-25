@@ -48,7 +48,7 @@ const Signup = () => {
         <div className='flex pt-28 pb-12 justify-center'>
             <div className=" w-96 shadow">
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">Signup</h2>
+                    <h2 className="card-title text-primary">Signup</h2>
 
                     <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
 
@@ -145,7 +145,7 @@ const Signup = () => {
 
                         </div>
                         {signInError}
-                        <input className='btn btn-primary w-full my-3 max-w-xs' type="submit" value="Signup" />
+                        <input className='btn btn-primary w-full text-white my-3 max-w-xs' type="submit" value="Signup" />
 
 
                     </form>

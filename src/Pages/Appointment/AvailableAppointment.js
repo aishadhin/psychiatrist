@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import AppointmentModal from './AppointmentModal';
 import DateCard from './DateCard';
@@ -15,10 +15,14 @@ const AvailableAppointment = ({ date }) => {
      )
    )
 
+   if (isLoading) {
+    return <button className="btn relative top-[50%] left-[50%] btn-square bg-primary loading"></button>
+}
+
     return (
-        <div className='container mx-auto'>
+        <div className='w-[88%] py-[65px] mx-auto'>
             <div>
-                <h2 className='text-center'>Available Appointments on {format(date, 'PP')}</h2>
+                <h2 className='text-center text-xl font-medium mb-10 capitalize'>Available Appointments on: <span className='text-primary'>{format(date, 'PP')}</span> </h2>
                 <div className='lg:grid mx-auto lg:grid-cols-3'>
                     {
                         services?.map(service => <DateCard setTreatment={setTreatment} service={service} key={service._id}></DateCard>)

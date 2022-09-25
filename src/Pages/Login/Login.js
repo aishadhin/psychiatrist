@@ -26,7 +26,7 @@ const Login = () => {
 
     
     if (loading || gLoading) {
-        return <button className="btn absolute top-[50%] left-[50%] btn-square loading"></button>
+        return <button className="btn relative top-[50%] left-[50%] btn-square loading"></button>
     }
 
 
@@ -45,7 +45,7 @@ const Login = () => {
         <div className='flex pt-28 pb-12 justify-center'>
             <div className=" w-96 shadow">
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">Login</h2>
+                    <h2 className="card-title text-primary">Login</h2>
 
                     <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
 
@@ -111,7 +111,7 @@ const Login = () => {
 
                         </div>
                         {signInError}
-                        <input className='btn btn-primary w-full my-3 max-w-xs' type="submit" value="Login" />
+                        <input className='btn btn-primary w-full my-3 max-w-xs text-white' type="submit" value="Login" />
 
 
                     </form>

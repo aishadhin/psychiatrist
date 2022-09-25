@@ -52,10 +52,10 @@ const AppointmentModal = ({refetch, setTreatment, treatment, date, }) => {
     return (
         <div>
             <input type="checkbox" id="my-modal-6" className="modal-toggle" />
-            <div className="modal modal-bottom sm:modal-middle">
-                <div className="modal-box">
-                    <label htmlFor="my-modal-6" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 className="font-bold text-lg">Booking for {treatment?.name}</h3>
+            <div className="modal modal-bottom bg-[#26aba347] sm:modal-middle">
+                <div className="modal-box bg-white lg:w-[29%]">
+                    <label htmlFor="my-modal-6" className="btn bg-primary border-none btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h3 className="font-bold text-lg text-primary py-2 text-center">Booking for {treatment?.name}</h3>
                     <form onSubmit={handleSubmit}>
                         <input name='time' type="text" disabled value={format(date, 'PP')} className="input input-bordered w-full my-2 max-w-xs" />
                         <select name='slot' className="select select-bordered w-full my-2 max-w-xs">
@@ -65,8 +65,8 @@ const AppointmentModal = ({refetch, setTreatment, treatment, date, }) => {
                         </select>
                         <input type="text" value={user?.displayName} disabled name='name' className="input input-bordered w-full max-w-xs my-2 " />
                         <input type="email" value={user?.email} disabled name='email' className="input input-bordered w-full max-w-xs my-2 " />
-                        <input type="text" placeholder="Your Phone Number" name='phone' className="input input-bordered w-full max-w-xs my-2 " />
-                        <input type="submit" value="Submit" className="btn btn-primary w-full max-w-xs my-2 " />
+                        <input type="text" placeholder="Your Phone Number (optional)" name='phone' className="input input-bordered w-full max-w-xs my-2 " />
+                        <input type="submit" value="Submit" className="btn capitalize text-white text-[16px] btn-primary w-full max-w-xs my-2 " />
                     </form>
                 </div>
             </div>
