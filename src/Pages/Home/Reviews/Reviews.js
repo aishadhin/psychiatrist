@@ -9,7 +9,7 @@ const Reviews = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 1000,
+        speed: 600,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
@@ -46,7 +46,7 @@ const Reviews = () => {
                     <h2 className='capitalize text-3xl font-bold'>What Patients Says</h2>
                     <p className='mt-3 lg:w-4/6 mx-auto'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div className='my-16'>
+                <div className=''>
                     <Slider {...settings} className='flex gap-5'>
                         <div>
                             <div className='mx-auto my-10'>
