@@ -15,6 +15,7 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import RequireAdmin from "./Pages/Login/RequireAdmin";
 import RequireAuth from "./Pages/Login/RequireAuth";
+import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navbar from './Pages/Shared/Navbar/Navbar';
 import Signup from "./Pages/Signup/Signup";
@@ -44,6 +45,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <ToastContainer />
