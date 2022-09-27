@@ -10,8 +10,8 @@ const Contact = () => {
                 <h1 className='lg:text-[42px] mt-5 lg:mt-0 text-[22px] lg:leading-[60px] font-bold capitalize text-center text-white'>Contact</h1>
             </div>
             <div class="w-[88%] pb-16 mx-auto">
-                <div className='lg:w-2/3 bg-white p-10 lg:flex mx-auto mt-[-100px]'>
-                    <div className='w-2/5 flex flex-col self-center items-center'>
+                <div className='lg:w-2/3 bg-white shadow p-10 lg:flex mx-auto mt-[-100px]'>
+                    <div className='w-2/5 flex flex-col self-center'>
 
                         {/* contact details */}
                         <div className=''>

@@ -19,7 +19,9 @@ const Payment = () => {
     }).then(res => res.json()));
 
     if (isLoading) {
-        return <button className="btn absolute top-[50%] left-[50%] btn-square loading"></button>
+        return <div className='grid place-items-center p-[200px]'>
+            <button className="btn btn-square bg-primary border-none loading"></button>
+        </div>
     }
 
 
@@ -36,7 +38,7 @@ const Payment = () => {
                             <p>Amount ${appointment.price}</p>
                             <div className="card-body">
                                 <Elements stripe={stripePromise}>
-                                    <CheckoutForm appointment={appointment}/>
+                                    <CheckoutForm appointment={appointment} />
                                 </Elements>
                             </div>
                         </div>

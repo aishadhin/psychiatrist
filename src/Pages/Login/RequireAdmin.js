@@ -5,16 +5,18 @@ import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 import useAdmin from '../../Hooks/useAdmin';
 
-const RequireAdmin = ({children}) => {
+const RequireAdmin = ({ children }) => {
     const [user, loading] = useAuthState(auth);
     const [admin, adminLoading] = useAdmin(user);
     const location = useLocation();
 
-    if(loading || adminLoading){
-        return <button className="btn absolute top-[50%] left-[50%] btn-square loading"></button>
+    if (loading || adminLoading) {
+        return <div className='grid place-items-center p-[200px]'>
+            <button className="btn btn-square bg-primary border-none loading"></button>
+        </div>
     }
 
-    if(!user || !admin){
+    if (!user || !admin) {
         signOut(auth);
         return <Navigate to="/login" state={{ from: location }} replace></Navigate>
     }

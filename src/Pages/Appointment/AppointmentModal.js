@@ -38,7 +38,7 @@ const AppointmentModal = ({refetch, setTreatment, treatment, date, }) => {
             .then(res => res.json())
             .then(data => {
                 if(data.success){
-                    toast(`Appointment is set, ${formattedDate} at ${slot}`)
+                    toast.success(`Appointment is set, ${formattedDate} at ${slot}`)
                 }
                 else{
                     toast.error(`Already have an appointment on ${data.booking?.date} at ${data.booking?.slot}`)

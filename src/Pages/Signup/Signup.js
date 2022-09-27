@@ -18,7 +18,9 @@ const Signup = () => {
     const navigate = useNavigate()
 
     if (loading || gLoading || updating) {
-        return <button className="btn absolute top-[50%] left-[50%] btn-square loading"></button>
+        return <div className='grid place-items-center p-[200px]'>
+            <button className="btn btn-square bg-primary border-none loading"></button>
+        </div>
     }
 
     if (token) {
@@ -40,7 +42,7 @@ const Signup = () => {
         await createUserWithEmailAndPassword(data?.email, data?.password);
         await updateProfile({ displayName: data.name });
         console.log(data)
-        
+
     };
 
 

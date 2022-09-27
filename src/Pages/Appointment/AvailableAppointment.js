@@ -9,15 +9,17 @@ const AvailableAppointment = ({ date }) => {
 
     const formattedDate = format(date, 'PP')
 
-    const { refetch, isLoading, error, data:services } = useQuery(['available' , formattedDate], () =>
-     fetch(`http://localhost:5000/available?date=${formattedDate}`).then(res =>
-       res.json()
-     )
-   )
+    const { refetch, isLoading, error, data: services } = useQuery(['available', formattedDate], () =>
+        fetch(`http://localhost:5000/available?date=${formattedDate}`).then(res =>
+            res.json()
+        )
+    )
 
-   if (isLoading) {
-    return <button className="btn relative top-[50%] left-[50%] btn-square bg-primary loading"></button>
-}
+    if (isLoading) {
+        return <div className='grid place-items-center p-[200px]'>
+            <button className="btn btn-square bg-primary border-none loading"></button>
+        </div>
+    }
 
     return (
         <div className='w-[88%] py-[65px] mx-auto'>
@@ -29,7 +31,7 @@ const AvailableAppointment = ({ date }) => {
                     }
                 </div>
                 <div>
-                   {treatment &&  <AppointmentModal refetch={refetch} setTreatment = {setTreatment} services={services} date={date} treatment={treatment}></AppointmentModal>}
+                    {treatment && <AppointmentModal refetch={refetch} setTreatment={setTreatment} services={services} date={date} treatment={treatment}></AppointmentModal>}
                 </div>
             </div>
         </div>

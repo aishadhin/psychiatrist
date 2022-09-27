@@ -5,12 +5,14 @@ import UserRow from './UserRow';
 const Users = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
         method: 'GET',
-        headers:{
+        headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()));
     if (isLoading) {
-        return <button className="btn absolute top-[50%] left-[50%] btn-square loading"></button>
+        return <div className='grid place-items-center p-[200px]'>
+            <button className="btn btn-square bg-primary border-none loading"></button>
+        </div>
     }
     return (
         <div>
@@ -26,13 +28,13 @@ const Users = () => {
                         </tr>
                     </thead>
                     <tbody>
-                       {
-                           users.map(user=><UserRow
-                           key={user._id}
-                           user={user}
-                           refetch={refetch}
-                           ></UserRow>)
-                       }
+                        {
+                            users.map(user => <UserRow
+                                key={user._id}
+                                user={user}
+                                refetch={refetch}
+                            ></UserRow>)
+                        }
                     </tbody>
                 </table>
             </div>

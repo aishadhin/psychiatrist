@@ -13,18 +13,18 @@ const Footer = () => {
                     <img className='w-3/5 mx-auto lg:mx-0' src={logo} alt="" />
                 </div>
                 <div className=' flex justify-between'>
-                    <Link to='' className='text-white lg:px-4 py-2 font-bold'>Home</Link>
-                    <Link to='' className='text-white lg:px-4 py-2 font-bold'>About</Link>
-                    <Link to='' className='text-white lg:px-4 py-2 font-bold'>Program</Link>
-                    <Link to='' className='text-white lg:px-4 py-2 font-bold'>Blog</Link>
-                    <Link to='' className='text-white lg:px-4 py-2 font-bold'>Gallery</Link>
-                    <Link to='' className='text-white lg:px-4 py-2 font-bold'>Contacts</Link>
+                    <Link to='/' className='text-white lg:px-4 py-2 font-bold'>Home</Link>
+                    <Link to='/about' className='text-white lg:px-4 py-2 font-bold'>About</Link>
+                    <Link to='/' className='text-white lg:px-4 py-2 font-bold'>Program</Link>
+                    <Link to='/' className='text-white lg:px-4 py-2 font-bold'>Blog</Link>
+                    <Link to='/' className='text-white lg:px-4 py-2 font-bold'>Gallery</Link>
+                    <Link to='/contact' className='text-white lg:px-4 py-2 font-bold'>Contact</Link>
                 </div>
                 <div className='flex mt-2 lg:mt-0 lg:justify-between justify-center'>
-                    <Link to='' className='px-2 lg:px-1'><MdFacebook className='text-white text-2xl' /></Link>
-                    <Link to='' className='px-2 lg:px-1'><AiFillInstagram className='text-white text-2xl ' /></Link>
-                    <Link to='' className='px-2 lg:px-1'><AiFillTwitterCircle className='text-white text-2xl' /></Link>
-                    <Link to='' className='px-2 lg:px-1'><IoLogoWhatsapp className='text-white text-2xl' /></Link>
+                    <Link to='#' className='px-2 lg:px-1'><MdFacebook className='text-white text-2xl' /></Link>
+                    <Link to='#' className='px-2 lg:px-1'><AiFillInstagram className='text-white text-2xl ' /></Link>
+                    <Link to='#' className='px-2 lg:px-1'><AiFillTwitterCircle className='text-white text-2xl' /></Link>
+                    <Link to='#' className='px-2 lg:px-1'><IoLogoWhatsapp className='text-white text-2xl' /></Link>
                 </div>
             </footer>
         </div>

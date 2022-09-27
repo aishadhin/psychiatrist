@@ -24,9 +24,11 @@ const Login = () => {
         }
     }, [token, from, navigate])
 
-    
+
     if (loading || gLoading) {
-        return <button className="btn relative top-[50%] left-[50%] btn-square loading"></button>
+        return <div className='grid place-items-center p-[200px]'>
+            <button className="btn btn-square bg-primary border-none loading"></button>
+        </div>
     }
 
 
