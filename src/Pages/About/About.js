@@ -11,7 +11,11 @@ const About = () => {
             </div>
             <div class="w-[88%] pb-16 mx-auto">
                 <div className='lg:w-1/2 mx-auto'>
+
+                    {/* about image */}
                     <img className='mt-[-100px]' src={about} alt="" />
+
+                    {/* about paragraph */}
                     <p className='lg:mt-16 mt-3'>
                         <span className='text-primary text-xl font-medium'>Dr. Marry Stone</span> is a experienced psychiatrist who can prescribe the medication to mitigatethe symptoms of your mental illness. At the same time, she supports your progress through talk therapy that unravels the mystery of your issues. Add compassion and dedication, and you’ve got Dr. Marry Stone.
 
@@ -19,7 +23,8 @@ const About = () => {
 
                         Dr. Marry Stone treats you with respect and dignity in a confidential session. She also makes you feel valued and appreciated because his focus is on you and helping you work through the issues at hand. As one client put it:
                     </p>
-                    {/* hero section counter  */}
+
+                    {/* about counter  */}
                     <div className='mt-12 mx-auto justify-between flex gap-16'>
                         <div>
                             <h3>
@@ -41,6 +46,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* review carousel */}
                 <div className='mt-16'>
                     <Reviews></Reviews>
                 </div>

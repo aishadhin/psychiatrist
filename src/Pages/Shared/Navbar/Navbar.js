@@ -18,9 +18,8 @@ const Navbar = () => {
     const menuItems = <>
         <li><Link className='font-medium' to="/">Home</Link></li>
         <li><Link className='font-medium' to="/Appointment">Appointment</Link></li>
-        <li><Link className='font-medium' to="/Reviews">Reviews</Link></li>
-        <li><Link className='font-medium' to="/AboutUs">About</Link></li>
-        <li><Link className='font-medium' to="/ContactUs">Contact</Link></li>
+        <li><Link className='font-medium' to="/About">About</Link></li>
+        <li><Link className='font-medium' to="/Contact">Contact</Link></li>
         {
             user && <li><Link className='font-medium' to="/dashboard">Dashboard</Link></li>
         }
